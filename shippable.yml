@@ -3,6 +3,11 @@ language: node_js
 node_js:
  - 0.10
 
+env:
+ global:
+  - APP_NAME=devops-gustavobogas
+  - HEROKU_API=19a30785-0306-455d-86fb-b1ecca8c5a2a
+
 build:
  ci:
   - npm install
