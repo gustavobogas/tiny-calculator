@@ -13,5 +13,13 @@ build:
   - npm install
   - npm test
 
+ on_sucess:
+  - ./heroku_auth
+  - git push -f https://git.heroku.com/devops-gustavobogas.git master
 
+before_install:
+ - sudo apt-get update
+ - sudo apt-get install expect
+ - which heroku || wget -q0- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+ - chmod +x heroku_auth
 
